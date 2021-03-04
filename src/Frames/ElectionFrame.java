@@ -23,11 +23,14 @@ import javax.swing.border.EmptyBorder;
 
 import Enums.ECandidate;
 import Frames.BaseFrames.MainBaseFrame;
-import Frames.SenatorElectionFrame.RemindTask;
 import Models.Candidate;
 
 public class ElectionFrame extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	Timer timer;
 	private JPanel contentPane;
 	private ECandidate _eCandidate;

@@ -18,7 +18,6 @@ import Enums.ECandidate;
 import Frames.BaseFrames.MainBaseFrame;
 import Frames.BaseFrames.RegisterBaseFrame;
 import Models.Candidate;
-import Models.Congressman;
 import java.awt.Font;
 
 public class RegisterFrame extends JFrame {
