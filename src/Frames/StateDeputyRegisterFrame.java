@@ -121,7 +121,6 @@ public class StateDeputyRegisterFrame extends JFrame {
 		pnlCenterCadastroDE.add(tfdPartidoDE);
 		tfdPartidoDE.setColumns(10);
 		
-		
 		tfdNumeroDE = new JTextField();
 		pnlCenterCadastroDE.add(tfdNumeroDE);
 		tfdNumeroDE.setColumns(10);

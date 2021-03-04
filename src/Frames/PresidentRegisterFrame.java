@@ -117,14 +117,14 @@ public class PresidentRegisterFrame extends JFrame {
 		pnlCenterCadastroPresidente.add(tfdNomePresidente);
 		tfdNomePresidente.setColumns(10);
 		
+		tfdPartidoPresidente = new JTextField();
+		pnlCenterCadastroPresidente.add(tfdPartidoPresidente);
+		tfdPartidoPresidente.setColumns(10);
 		
 		tfdNumeroPresidente = new JTextField();
 		pnlCenterCadastroPresidente.add(tfdNumeroPresidente);
 		tfdNumeroPresidente.setColumns(10);
 		
-		tfdPartidoPresidente = new JTextField();
-		pnlCenterCadastroPresidente.add(tfdPartidoPresidente);
-		tfdPartidoPresidente.setColumns(10);
 		
 	}
 

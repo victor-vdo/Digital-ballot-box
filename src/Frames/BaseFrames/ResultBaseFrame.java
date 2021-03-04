@@ -152,7 +152,7 @@ public class ResultBaseFrame extends JFrame {
 		tfdDF.setColumns(10);
 		for (Candidate candidato : MainBaseFrame.listaCandidatos) 
 		{
-			String stringNumero = String.valueOf(candidato.getCandidateNumber());
+			//String stringNumero = String.valueOf(candidato.getCandidateNumber());
 
 			Candidate presidente = new President(" ", " ", 0);
 			Candidate governador = new Governator("", "", 0);
@@ -237,7 +237,8 @@ public class ResultBaseFrame extends JFrame {
 		tfdDE.setColumns(10);
 		for (Candidate candidato : MainBaseFrame.listaCandidatos) 
 		{
-			String stringNumero = String.valueOf(candidato.getCandidateNumber());
+			//String stringNumero = String.valueOf(candidato.getCandidateNumber());
+			String nameCandidate = String.valueOf(candidato.getName());
 			long votos=0;
 			if (candidato instanceof Models.StateDeputy) 
 			{
@@ -246,7 +247,7 @@ public class ResultBaseFrame extends JFrame {
 					votos = Candidate.getNumVotes();
 				}
 				
-			tfdDE.setText(stringNumero);
+			tfdDE.setText(nameCandidate);
 			}
 		}
 		
