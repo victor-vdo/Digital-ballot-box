@@ -4,12 +4,14 @@ public class Candidate
 {
 	protected String Name;
 	protected String CandidateParty;
+	protected int Number;
 	protected static long numVotes=0;
 	
-	public Candidate(String name, String candidateParty) 
+	public Candidate(String name, String candidateParty, int number) 
 	{
 		this.Name = name;
 		this.CandidateParty = candidateParty;
+		this.Number = number;
 	}
 
 	public void increaseVote() 
