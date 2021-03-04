@@ -118,14 +118,14 @@ public class GovernorRegisterFrame extends JFrame {
 		pnlCenterCadastroGovernador.add(tfdNomeGovernador);
 		tfdNomeGovernador.setColumns(10);
 		
+		tfdPartidoGovernador = new JTextField();
+		pnlCenterCadastroGovernador.add(tfdPartidoGovernador);
+		tfdPartidoGovernador.setColumns(10);
 		
 		tfdNumeroGovernador = new JTextField();
 		pnlCenterCadastroGovernador.add(tfdNumeroGovernador);
 		tfdNumeroGovernador.setColumns(10);
 		
-		tfdPartidoGovernador = new JTextField();
-		pnlCenterCadastroGovernador.add(tfdPartidoGovernador);
-		tfdPartidoGovernador.setColumns(10);
 		
 	}
 

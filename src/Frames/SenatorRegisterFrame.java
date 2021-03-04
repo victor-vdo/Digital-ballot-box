@@ -118,15 +118,13 @@ public class SenatorRegisterFrame extends JFrame {
 		pnlCenterCadastroSenador.add(tfdNomeSenador);
 		tfdNomeSenador.setColumns(10);
 		
-		
-		tfdNumeroSenador = new JTextField();
-		pnlCenterCadastroSenador.add(tfdNumeroSenador);
-		tfdNumeroSenador.setColumns(10);
-		
 		tfdPartidoSenador = new JTextField();
 		pnlCenterCadastroSenador.add(tfdPartidoSenador);
 		tfdPartidoSenador.setColumns(10);
 		
+		tfdNumeroSenador = new JTextField();
+		pnlCenterCadastroSenador.add(tfdNumeroSenador);
+		tfdNumeroSenador.setColumns(10);
 	}
 
 }

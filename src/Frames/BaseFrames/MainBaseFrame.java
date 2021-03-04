@@ -19,7 +19,6 @@ import Models.Candidate;
 
 import java.awt.Color;
 import javax.swing.SwingConstants;
-import javax.swing.ImageIcon;
 import java.awt.Dimension;
 
 public class MainBaseFrame extends JFrame {
@@ -61,7 +60,7 @@ public class MainBaseFrame extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setIcon(new ImageIcon(MainBaseFrame.class.getResource("/Imagens/eleicoes-2018.jpg")));
+		
 		lblNewLabel.setSize(250,150);
 		pnlADMCentral.add(lblNewLabel);
 		

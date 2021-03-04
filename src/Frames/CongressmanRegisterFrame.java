@@ -23,8 +23,8 @@ public class CongressmanRegisterFrame extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	JLabel lblNomeDF, lblPartidoDF, lblNumeroDF;
-	JTextField tfdNomeDF, tfdPartidoDF,tfdNumeroDF;
+	JLabel lblNameDF, lblPartidoDF, lblNumeroDF;
+	JTextField tfdNameDF, tfdPartidoDF,tfdNumeroDF;
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -74,9 +74,9 @@ public class CongressmanRegisterFrame extends JFrame {
 		pnlLeftCadastroDF.setLayout(new GridLayout(10, 1, 0, 0));
 		
 		
-		lblNomeDF = new JLabel();
-		lblNomeDF.setText("Nome:");
-		pnlLeftCadastroDF.add(lblNomeDF);
+		lblNameDF = new JLabel();
+		lblNameDF.setText("Nome:");
+		pnlLeftCadastroDF.add(lblNameDF);
 		
 		JLabel lblPartido = new JLabel("Partido:");
 		pnlLeftCadastroDF.add(lblPartido);
@@ -88,11 +88,11 @@ public class CongressmanRegisterFrame extends JFrame {
 		btnCadastrarDF.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-					String nome = tfdNomeDF.getText();
+					String name = tfdNameDF.getText();
 					String partido = tfdPartidoDF.getText();
 					String digNumero = tfdNumeroDF.getText();
 					int numero = Integer.parseInt(digNumero);
-					Congressman DF = new Congressman(nome,partido,numero);
+					Congressman DF = new Congressman(name,partido,numero);
 					MainBaseFrame.listaCandidatos.add(DF);
 				}
 			}
@@ -111,19 +111,19 @@ public class CongressmanRegisterFrame extends JFrame {
 		pnlLeftCadastroDF.add(btnVoltar);
 		pnlCenterCadastroDF.setLayout(new GridLayout(10, 1, 0, 0));
 		
-		tfdNomeDF = new JTextField();
-		tfdNomeDF.setHorizontalAlignment(SwingConstants.LEFT);
-		pnlCenterCadastroDF.add(tfdNomeDF);
-		tfdNomeDF.setColumns(10);
-		
-		
-		tfdNumeroDF = new JTextField();
-		pnlCenterCadastroDF.add(tfdNumeroDF);
-		tfdNumeroDF.setColumns(10);
+		tfdNameDF = new JTextField();
+		tfdNameDF.setHorizontalAlignment(SwingConstants.LEFT);
+		pnlCenterCadastroDF.add(tfdNameDF);
+		tfdNameDF.setColumns(10);
 		
 		tfdPartidoDF = new JTextField();
 		pnlCenterCadastroDF.add(tfdPartidoDF);
 		tfdPartidoDF.setColumns(10);
+		
+		tfdNumeroDF = new JTextField();
+		pnlCenterCadastroDF.add(tfdNumeroDF);
+		tfdNumeroDF.setColumns(10);
+	
 		
 	}
 
