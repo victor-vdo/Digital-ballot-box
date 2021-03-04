@@ -19,19 +19,21 @@ import Frames.BaseFrames.MainBaseFrame;
 import Frames.BaseFrames.RegisterBaseFrame;
 import Models.Candidate;
 import Models.Congressman;
+import java.awt.Font;
 
 public class RegisterFrame extends JFrame {
 
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	public String title;
 	JLabel lblPoliticalName, lblPoliticalParty, lblPoliticalNumber;
 	JTextField tfdPoliticalName, tfdPoliticalParty,tfdPoliticalNumber;
+	private ECandidate _eCandidate;
 	
-	RegisterFrame(ECandidate ecandidate){}
-	
-	/**
-	 * Launch the application.
-	 */
+	RegisterFrame(ECandidate ecandidate){
+		_eCandidate = ecandidate;
+	}
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -51,7 +53,7 @@ public class RegisterFrame extends JFrame {
 	public RegisterFrame() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
-		setTitle(this.title);
+		setTitle(getTitle(_eCandidate));
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -80,13 +82,19 @@ public class RegisterFrame extends JFrame {
 		
 		
 		lblPoliticalName = new JLabel();
+		lblPoliticalName.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lblPoliticalName.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPoliticalName.setText("Nome:");
 		pnlLeft.add(lblPoliticalName);
 		
 		JLabel lblPartido = new JLabel("Partido:");
+		lblPartido.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lblPartido.setHorizontalAlignment(SwingConstants.CENTER);
 		pnlLeft.add(lblPartido);
 		
 		JLabel lblNumeroDF = new JLabel("N\u00FAmero:");
+		lblNumeroDF.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lblNumeroDF.setHorizontalAlignment(SwingConstants.CENTER);
 		pnlLeft.add(lblNumeroDF);
 		
 		JButton btnCadastrarDF = new JButton("Cadastrar");
@@ -97,7 +105,7 @@ public class RegisterFrame extends JFrame {
 					String politicalParty = tfdPoliticalParty.getText();
 					String digNumber = tfdPoliticalNumber.getText();
 					int number = Integer.parseInt(digNumber);
-					Candidate candidate = new Candidate(name, politicalParty, number);
+					Candidate candidate = new Candidate(name, politicalParty, number, _eCandidate);
 					MainBaseFrame.listaCandidatos.add(candidate);
 				}
 			}
@@ -129,5 +137,23 @@ public class RegisterFrame extends JFrame {
 		pnlCenter.add(tfdPoliticalNumber);
 		tfdPoliticalNumber.setColumns(10);
 	}
+	
+	public String getTitle(ECandidate ecandidate) {
+		switch(ecandidate.ordinal()) {
+		case 0:
+			return "Deputado Federal";
+		case 1:
+			return "Governador";
+		case 2:
+			return "Presidente";
+		case 3:
+			return "Senador";
+		case 4:
+			return "Deputado Estadual";
+			default:
+				return "Indefinido";
+		}
+	}
+	
 
 }

@@ -1,17 +1,21 @@
 package Models;
 
+import Enums.ECandidate;
+
 public class Candidate 
 {
 	protected String Name;
 	protected String CandidateParty;
 	protected int Number;
+	protected ECandidate ECandidate;
 	protected static long numVotes=0;
 	
-	public Candidate(String name, String candidateParty, int number) 
+	public Candidate(String name, String candidateParty,int number, ECandidate ecandidate) 
 	{
 		this.Name = name;
 		this.CandidateParty = candidateParty;
 		this.Number = number;
+		this.ECandidate = ecandidate;
 	}
 
 	public void increaseVote() 
