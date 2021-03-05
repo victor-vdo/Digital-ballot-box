@@ -1,15 +1,16 @@
 package Models;
-
+import Enums.ECandidate;
 
 public class StateDeputy extends Candidate
 {
 	int number;
 	private static int limite = 11111;
 	
-	public StateDeputy(String name, String politicalParty, int politicalNumber)
+	public StateDeputy(String name, String politicalParty, int politicalNumber, ECandidate ecandidate)
 	{
-		super(name,politicalParty);
-		setNumber(politicalNumber);
+		super(name,politicalParty, politicalNumber, ecandidate);
+		number = politicalNumber;
+		setNumber(number);
 	}
 	
 	@Override

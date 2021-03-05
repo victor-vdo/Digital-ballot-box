@@ -1,31 +1,33 @@
 package Models;
 
+import Enums.ECandidate;
 
 public class Congressman extends Candidate
 {
-	int numero;
+	int number;
 	private static int limite = 1111;
 	
-	public Congressman(String nome, String partido, int numero)
+	public Congressman(String nome, String partido, int num, ECandidate ecandidate)
 	{
-		super(nome,partido);
-		setNumero(numero);
+		super(nome, partido, num, ecandidate);
+		number = num;
+		setNumero(number);
 	}
 
 	@Override
 	public int getCandidateNumber() {
-		return numero;
+		return number;
 	}
 
 	public void setNumero(int numero)
 	{
 		if(numero >= limite && numero <= 9999) 
 		{
-		this.numero = numero;
+		this.number = numero;
 		}
 		else 
 		{
-			this.numero = limite;
+			this.number = limite;
 			limite--;
 		}
 	}
